@@ -84,7 +84,7 @@
         <meta name="theme-color" content="#ffffff" />
 
         <!-- Reset CSS -->
-        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/reset.css" />
 
         <!-- Embed font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,12 +97,34 @@
         <!-- Styles CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
-    <body>
-        <h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
-            officiis quasi unde aliquam error excepturi cumque voluptates
-            quisquam, accusantium, id provident molestiae repudiandae aliquid
-            dolores explicabo sunt atque officia architecto!
-        </h1>
+    <body style="height: 10000px">
+        <header class="header header-fixed">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Logo -->
+                    <img
+                        src="./assets/imgs/logo.svg"
+                        alt="CeloBank"
+                        class="logo"
+                    />
+
+                    <!-- Navigation -->
+                    <nav class="nav">
+                        <a href="#" class="nav__link nav__link--active">Home</a>
+                        <a href="#products" class="nav__link">Products</a>
+                        <a href="#features" class="nav__link">Features</a>
+                        <a href="#blog" class="nav__link">Blog</a>
+                    </nav>
+
+                    <!-- Action -->
+                    <div class="header__action">
+                        <a href="#!" class="header__btn header__btn--login"
+                            >Log in</a
+                        >
+                        <a href="#!" class="btn header__btn--signup">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
     </body>
 </html>
