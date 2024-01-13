@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
 input,
 button {
     outline: none;
@@ -488,4 +492,128 @@ button {
     margin-top: 0.5rem;
     font-size: 0.8rem;
     font-weight: 400;
+}
+
+/* Works */
+
+.work {
+    margin-bottom: 16rem;
+}
+
+.work__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.work__media {
+    position: relative;
+    max-width: 47rem;
+}
+
+.work__media--img {
+    margin: 0 auto;
+    position: relative;
+    width: 45.6rem;
+    height: 61.9rem;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+.work__media--background,
+.work__media--icon,
+.work__card {
+    position: absolute;
+}
+
+.work__media--background {
+    bottom: 0;
+    left: 0;
+}
+
+.work__media--icon {
+    top: 7.6rem;
+    right: 5.5rem;
+}
+
+.work__card {
+    font-family: Inter, sans-serif;
+    right: -9rem;
+    bottom: 9.6rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    background: #fffdfa;
+    box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.07);
+    z-index: 1;
+}
+
+.work__card--icon--wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.6rem;
+    background: #4ab5e3;
+}
+
+.work__card--icon--wrapper::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.work__card--icon {
+    z-index: 1;
+}
+
+.work__card--info {
+    margin-left: 1rem;
+}
+
+.work__card--title {
+    color: #212832;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.work__card--desc {
+    margin-top: 0.5rem;
+    color: #696d76;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.work__content {
+    margin-left: 10rem;
+    max-width: 47rem;
+}
+
+.work__heading {
+    margin-bottom: 7rem;
+}
+
+.work__heading--sub {
+    margin-top: 3rem;
+    color: #212832;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.45; /* 145.455% */
+}
+
+.work__desc {
+    margin-top: 1.6rem;
+    color: #696d76;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem; /* 175% */
 }
