@@ -17,41 +17,92 @@ a {
     text-decoration: none;
 }
 
+input,
+button {
+    outline: none;
+    border: none;
+}
+
 .container {
-    width: 1170px;
-    max-width: calc(100vw - 48px);
+    width: 117rem;
+    max-width: calc(100vw - 4.8rem);
     margin-left: auto;
     margin-right: auto;
 }
 
 .btn {
     --height: 5.8rem;
+    --background-color-primary: #212832;
+    --background-color-hover: #7264d6;
 
     display: inline-block;
     border-radius: 0.6rem;
-    background: #212832;
+    background: var(--background-color-primary);
     color: #fff;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
     width: 11.3rem;
     line-height: var(--height); /* 175% */
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--background-color-hover);
+    cursor: pointer;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    color: #696d77;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.section-label::before {
+    margin-right: 1.2rem;
+    content: "";
+    display: inline-block;
+    background: #696d77;
+    width: 1.8rem;
+    height: 0.2rem;
+}
+
+.section-heading {
+    margin: 1.2rem 0 1.9rem;
+    color: #212832;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.section-desc {
+    color: #696d76;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
 }
 
 /* Header */
 
 .header {
     padding-top: 3.4rem;
+    background: #fff;
+}
+
+.header-fixed {
     position: sticky;
     top: -3.4rem;
-    background: #fff;
     z-index: 99;
 }
 
 .header__inner {
     display: flex;
     align-items: center;
-    padding: 6px 0;
+    padding: 0.6rem 0;
 }
 
 .nav {
@@ -61,7 +112,7 @@ a {
 }
 
 .nav__link {
-    padding: 8px 24px;
+    padding: 0.8rem 2.4rem;
     color: #696d76;
     font-size: 1.6rem;
     font-weight: 400;
@@ -71,7 +122,8 @@ a {
 .nav__link.nav__link--active,
 .nav__link:not(.nav__link--active):hover {
     color: #212832;
-    text-shadow: 0.1px 0.1px 0 currentColor, -0.1px -0.1px 0 currentColor;
+    text-shadow: 0.01rem 0.01rem 0 currentColor,
+        -0.01rem -0.01rem 0 currentColor;
 }
 
 .nav__link.nav__link--active {
@@ -81,12 +133,12 @@ a {
 .nav__link.nav__link--active::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 0.8rem;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 48px);
+    width: calc(100% - 4.8rem);
     height: 0.1rem;
-    border-radius: 99px;
+    border-radius: 10rem;
     background-color: #7264d6;
 }
 
@@ -110,9 +162,330 @@ a {
 
 .header__btn--signup {
     --height: 5.2rem;
-    transition: background 0.2s;
 }
 
-.header__btn--signup:hover {
-    background: #7264d6;
+/* Hero */
+.hero {
+    padding: 7rem 0 16rem;
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero__content {
+    width: 54rem;
+}
+
+.hero__heading {
+    font-size: 6rem;
+    line-height: 7rem;
+}
+
+.hero__heading strong {
+    color: #7264d6;
+}
+
+.hero__desc {
+    margin-bottom: 4rem;
+}
+
+.hero__input--wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+}
+
+.hero__input--input {
+    width: 100%;
+    padding: 2rem 2.3rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    color: #212832;
+}
+
+.hero__input--input::placeholder {
+    color: #696d76;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.hero__input--btn {
+    --background-color-primary: #7264d6;
+    --background-color-hover: #212832;
+
+    width: 14.9rem;
+    flex-shrink: 0;
+}
+
+.hero__note {
+    margin-top: 2rem;
+    color: #696d76;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.71;
+}
+
+.hero__media {
+    position: relative;
+}
+
+.hero__phone {
+    margin-left: 10rem;
+    position: relative;
+    padding: 4rem 1.1rem 3rem;
+    width: 29.6rem;
+    border-radius: 4rem;
+    border: 12px solid #212832;
+    background: #fff;
+}
+
+.hero__phone::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14.4rem;
+    height: 3.6rem;
+    border-radius: 0rem 0rem 1.8rem 1.8rem;
+    background: #3c2f60;
+    z-index: 1;
+}
+
+.phone__credit-card {
+    position: relative;
+    padding: 1.6rem;
+    border-radius: 2rem;
+    background: #7b6fd0;
+    color: #fff;
+    line-height: normal;
+}
+
+.credit__card-top--wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.credit-card__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.credit-card__icon {
+    margin-top: 0.5rem;
+}
+
+.credit-card__balance {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.credit-card__info--wrapper {
+    margin-top: 3.2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.credit-card__info-item {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.credit-card__info-item--bold {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.credit-card__decor {
+    position: absolute;
+}
+
+.credit-card__decor:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 2rem;
+}
+
+.credit-card__decor:nth-of-type(2) {
+    right: 0;
+    bottom: 0;
+    border-bottom-right-radius: 2rem;
+}
+
+.hero__transections {
+    margin-top: 2.4rem;
+}
+
+.transections__header,
+.transection-item {
+    display: flex;
+    align-items: center;
+}
+
+.transections__header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.8rem;
+}
+
+.transections__heading {
+    color: #31456a;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.transection-item + .transection-item {
+    margin-top: 2.8rem;
+}
+
+.transection__icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+.transection-item:nth-of-type(1) .transection__icon {
+    background: #4ab5e326;
+}
+
+.transection-item:nth-of-type(2) .transection__icon {
+    background: #da646426;
+}
+
+.transection-item:nth-of-type(3) .transection__icon {
+    background: #439f9026;
+}
+
+.transection-item:nth-of-type(4) .transection__icon {
+    background: #7264d626;
+}
+
+.transection-item__info {
+    margin-left: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.transection__top,
+.transection__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transection__top {
+    color: #212832;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.transection__bottom {
+    margin-top: 0.6rem;
+    color: #696d76;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+}
+
+.card__deposite,
+.card__interest,
+.card__secured {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.card__deposite {
+    top: 12.1rem;
+    left: 0;
+    padding: 1.4rem 1rem;
+    border-radius: 0.6rem;
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+}
+
+.card__deposite--title {
+    margin: 0 1.9rem 0 0.8rem;
+    color: #31456a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.card__deposite--money {
+    color: #4ab5e3;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+}
+
+.card__interest {
+    top: 12.7rem;
+    right: 0;
+    max-width: initial;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background: #da6464;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+
+.card__interest--rate {
+    font-size: 4.4rem;
+    font-weight: 600;
+}
+
+.card__interest--title {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.card__secured {
+    right: 10.5rem;
+    bottom: 6.1rem;
+    padding: 2.1rem 1.5rem;
+    border-radius: 1rem;
+    background: #439f90;
+}
+
+.card__secured--info {
+    margin-left: 1.1rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.card__secured--money {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card__secured--title {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
 }
