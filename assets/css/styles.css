@@ -54,7 +54,7 @@ button {
     font-size: 1.6rem;
     font-weight: 600;
     width: 11.3rem;
-    line-height: var(--height); /* 175% */
+    line-height: var(--height);
     transition: background 0.2s;
 }
 
@@ -1104,7 +1104,7 @@ button {
 
 /* CTA */
 .cta {
-    border: 1px solid red;
+    margin-bottom: 10rem;
 }
 
 .cta__inner {
@@ -1175,4 +1175,107 @@ button {
 .cta__decor:nth-of-type(4) {
     bottom: 4.9rem;
     right: 16.6rem;
+}
+
+/* Footer */
+.footer {
+    background: #fafbff;
+}
+
+.footer__top {
+    padding: 10rem 0 5.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    column-gap: 16.3rem;
+}
+
+.footer__column--title {
+    margin-bottom: 2.4rem;
+    color: #212832;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66; /* 166.667% */
+}
+
+.footer__column--item,
+.footer__column--address {
+    display: inline-block;
+    margin-top: 1.2rem;
+    white-space: nowrap;
+    color: #6a6e78;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66; /* 166.667% */
+}
+
+.footer__column--item:hover {
+    color: #4a4d54;
+    text-decoration: underline 0.1rem;
+}
+
+.footer__column--address {
+    white-space: initial;
+    width: 37.1rem;
+    margin-bottom: 4.8rem;
+}
+
+.footer__input--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__input--input {
+    border-radius: 0.6rem;
+    border: 1px solid #8e919a;
+    padding: 1.2rem 3rem 1.2rem 1.2rem;
+    color: #212832;
+}
+
+.footer__input--input,
+.footer__input--input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.footer__input--input::placeholder {
+    color: #8e919a;
+}
+
+.footer__submit {
+    --height: 5.2rem;
+    --background-color-hover: #212832;
+    --background-color-primary: #7264d6;
+}
+
+.footer__bottom {
+    margin-bottom: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10rem;
+}
+
+.footer__bottom--contact {
+    color: #6a6e78;
+    text-align: justify;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66; /* 166.667% */
+    text-decoration: underline 0.1rem;
+}
+
+.footer__bottom--contact:hover {
+    color: #4a4d54;
+}
+
+.footer__copyright {
+    background-color: #7264d6;
+    padding: 2.8rem 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
 }
