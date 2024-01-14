@@ -1101,3 +1101,78 @@ button {
     line-height: 1.62; /* 162.5% */
     transition: color 0.3s;
 }
+
+/* CTA */
+.cta {
+    border: 1px solid red;
+}
+
+.cta__inner {
+    position: relative;
+    padding: 10rem 0;
+    border-radius: 2.4rem;
+    background: #7264d6;
+}
+
+.cta__label,
+.cta__title,
+.cta__desc {
+    color: #fff;
+    text-align: center;
+}
+
+.cta__label {
+    display: flex;
+    justify-content: center;
+}
+
+.cta__label::before {
+    background: #fff;
+}
+
+.cta__desc {
+    margin: 0 auto;
+    width: 43.5rem;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.cta__apps--wrapper {
+    margin-top: 3.8rem;
+    display: flex;
+    column-gap: 1.6rem;
+    justify-content: center;
+}
+
+.cta__app--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.8rem 3.1rem;
+    border-radius: 0.6rem;
+}
+
+.cta__decor {
+    position: absolute;
+}
+
+.cta__decor:nth-of-type(1) {
+    top: 4.9rem;
+    left: 11.2rem;
+}
+
+.cta__decor:nth-of-type(2) {
+    top: 4.9rem;
+    right: 11.2rem;
+}
+
+.cta__decor:nth-of-type(3) {
+    bottom: 4.9rem;
+    left: 16.6rem;
+}
+
+.cta__decor:nth-of-type(4) {
+    bottom: 4.9rem;
+    right: 16.6rem;
+}
