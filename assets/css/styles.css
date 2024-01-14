@@ -855,7 +855,6 @@ button {
 
 /* Feedback */
 .feedback {
-    border: 1px solid red;
 }
 
 .feedback__inner {
@@ -876,6 +875,7 @@ button {
 .feedback__list {
     margin: 7rem 0 3.8rem;
     display: flex;
+    overflow: hidden;
 }
 
 .feedback__items-group {
