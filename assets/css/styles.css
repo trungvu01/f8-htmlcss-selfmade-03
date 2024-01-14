@@ -880,7 +880,10 @@ button {
 
 .feedback__items-group {
     --widen: calc((100vw - 117rem) / 2);
-    margin: 0 var(--widen);
+    --width-shadow: 5.4rem;
+
+    margin: var(--width-shadow) var(--widen);
+    padding: var(--width-shadow) 0;
     display: flex;
     column-gap: 3rem;
     flex-shrink: 0;
