@@ -881,7 +881,6 @@ button {
 }
 
 .feedback__list {
-    margin-bottom: 3.8rem;
     display: flex;
     overflow-x: hidden;
 }
@@ -889,7 +888,7 @@ button {
 .feedback__items-group {
     --widen: calc((100vw - 117rem) / 2);
 
-    margin: 7rem var(--widen);
+    margin: 7rem var(--widen) 3.8rem;
     display: flex;
     column-gap: 3rem;
     flex-shrink: 0;
